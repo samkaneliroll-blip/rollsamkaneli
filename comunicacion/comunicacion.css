@@ -1,0 +1,1941 @@
+
+/* =====================================================
+   COMUNICACION.CSS — SAMKANELI
+   Estilos específicos de la página de Comunicación
+===================================================== */
+
+
+/* =====================================================
+   1. ENCABEZADO DE CONVERSACIONES
+===================================================== */
+
+.bubbles {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--s2);
+}
+
+.bb {
+  max-width: 330px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 22px 22px 22px 4px;
+  background: #fff;
+  box-shadow: var(--sombra-sm);
+  font-weight: 700;
+}
+
+.bb.b2 {
+  align-self: flex-end;
+  border-radius: 22px 22px 4px 22px;
+  background: var(--verde);
+}
+
+.bb-m {
+  width: 130px;
+  align-self: center;
+}
+
+
+/* =====================================================
+   2. PERSONALIDAD VERBAL
+   Cinco frases que representan la marca
+===================================================== */
+
+.five {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--s2);
+  list-style: none;
+}
+
+.five-i {
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--s3);
+  border-radius: var(--r-lg);
+}
+
+.five-i span {
+  font: 700 2.4rem var(--f-display);
+  opacity: 0.6;
+}
+
+.five-i p {
+  margin: 0;
+  font: 600 1.3rem/1.2 var(--f-display);
+}
+
+/* Colores de las tarjetas */
+
+.f1 {
+  background: var(--rosa);
+}
+
+.f2 {
+  background: var(--verde);
+}
+
+.f3 {
+  transform: translateY(1.2rem);
+  background: #FFE3B8;
+}
+
+.f4 {
+  background: var(--rosa-suave);
+}
+
+.f5 {
+  transform: translateY(1.2rem);
+  background: var(--verde-suave);
+}
+
+/* Adaptación de las tarjetas */
+
+@media (max-width: 1100px) {
+  .five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .f3,
+  .f5 {
+    transform: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .five {
+    grid-template-columns: 1fr;
+  }
+
+  .five-i {
+    min-height: 0;
+  }
+}
+
+
+/* =====================================================
+   3. TONO DE VOZ
+   Tarjetas de cada principio de comunicación
+===================================================== */
+
+.pr-top {
+  margin-bottom: var(--s3);
+}
+
+.pr-g {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s2);
+}
+
+.pr-c {
+  padding: var(--s3);
+  border-radius: var(--r-md);
+}
+
+.pr-c h4 {
+  margin-bottom: 0.4rem;
+}
+
+.pr-c p {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos según el tipo de contenido */
+
+.pr-c.ok {
+  background: var(--verde-suave);
+}
+
+.pr-c.no {
+  background: #FBE0E8;
+}
+
+.pr-c.ex {
+  background: var(--rosa-suave);
+}
+
+.pr-c.ca {
+  border: 2px solid rgba(122, 67, 38, 0.15);
+  background: var(--crema-claro);
+}
+
+/* Adaptación de las tarjetas */
+
+@media (max-width: 1000px) {
+  .pr-g {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .pr-g {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   4. EJEMPLOS DE CONVERSACIONES
+===================================================== */
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+}
+
+.cv {
+  margin: 0;
+}
+
+.cv figcaption {
+  margin-bottom: 0.5rem;
+  font: 600 1.1rem var(--f-display);
+}
+
+/* Adaptación de las conversaciones */
+
+@media (max-width: 900px) {
+  .cv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   5. COMPARACIÓN DE RESPUESTAS
+===================================================== */
+
+.cmp {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+}
+
+.cmp figure {
+  margin: 0;
+}
+
+.cmp figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Etiquetas de evaluación */
+
+.tag {
+  display: inline-block;
+  margin-right: 0.3rem;
+  padding: 0.1rem 0.7rem;
+  border-radius: var(--r-pill);
+  font-weight: 800;
+}
+
+.t1 {
+  background: var(--verde);
+}
+
+.t2 {
+  background: #E4E4E4;
+}
+
+.t3 {
+  background: #FFE08A;
+}
+
+/* Adaptación de la comparación */
+
+@media (max-width: 900px) {
+  .cmp {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   6. CANALES DE COMUNICACIÓN DIGITAL
+===================================================== */
+
+.ch {
+  padding: var(--s2) var(--s3);
+}
+
+.ch h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.15rem;
+}
+
+.ch p {
+  margin-bottom: 0.4rem;
+}
+
+/* =========================================
+   ENCABEZADO DE COMUNICACIÓN SAMKANELI
+   Imagen de fondo + texto superpuesto
+========================================= */
+
+.pagehead.verbal-hero {
+  position: relative !important;
+  isolation: isolate;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 680px !important;
+  margin: 0 !important;
+  padding: 70px 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  background: #fff0e3;
+}
+
+/* La imagen se extiende por todo el encabezado */
+.pagehead.verbal-hero > .pagehead-visual.verbal-hero-fondo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Imagen nítida: no aplicar blur */
+.pagehead.verbal-hero .verbal-hero-fondo img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Velo claro para que destaque el texto */
+
+/* Filtro blanco rosado concentrado en la zona del texto */
+.pagehead.verbal-hero .verbal-hero-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 239, 231, 0.78) 0%,
+    rgba(255, 239, 231, 0.60) 32%,
+    rgba(255, 239, 231, 0.25) 52%,
+    rgba(255, 239, 231, 0.04) 72%,
+    rgba(255, 239, 231, 0) 100%
+  );
+}
+
+
+/* Contenedor del contenido delante de la imagen */
+.pagehead.verbal-hero > .verbal-hero-contenido {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+  padding: 0 5% !important;
+  box-sizing: border-box;
+}
+
+/* Texto de la izquierda */
+.pagehead.verbal-hero .verbal-hero-texto {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 62%;
+  max-width: 850px;
+}
+
+/* Contraste del texto */
+.pagehead.verbal-hero h1 {
+  color: #4f2818 !important;
+  text-shadow: none !important;
+}
+
+.pagehead.verbal-hero .lead {
+  color: #603723 !important;
+  line-height: 1.7;
+}
+
+.pagehead.verbal-hero .eyebrow {
+  color: #a82f67 !important;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 700px) {
+  .pagehead.verbal-hero {
+    min-height: 620px !important;
+    padding: 45px 0 !important;
+  }
+
+  .pagehead.verbal-hero > .verbal-hero-contenido {
+    padding: 0 24px !important;
+  }
+
+  .pagehead.verbal-hero .verbal-hero-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pagehead.verbal-hero .verbal-hero-fondo img {
+    object-position: 10% center !important;
+  }
+}
+
+/* MOVER EL FONDO A LA IZQUIERDA SIN AGRANDARLO */
+
+html body .pagehead.verbal-hero .pagehead-visual.verbal-hero-fondo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 75% center !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+
+/* =====================================================
+   TÍTULOS DE SECCIÓN — COMUNICACIÓN SAMKANELI
+===================================================== */
+
+body[data-page="comunicacion"] main .sec-head h2 {
+  color: #75432f !important;
+  font-family: "Fredoka", sans-serif !important;
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -1.2px !important;
+  text-align: left !important;
+  margin-bottom: 22px !important;
+}
+/* ========================================
+   ENCABEZADO CON IMAGEN DE FONDO
+   PÁGINA: COMUNICACIÓN
+======================================== */
+
+body[data-page="comunicacion"] .pagehead.comunicacion-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 420px;
+  background: #FFEED6;
+}
+
+/* Imagen de fondo */
+body[data-page="comunicacion"] .comunicacion-hero-fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body[data-page="comunicacion"] .comunicacion-hero-fondo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Degradado crema: más intenso a la izquierda */
+body[data-page="comunicacion"] .pagehead.comunicacion-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #FFEED6 0%,
+    rgba(255, 238, 214, 0.96) 35%,
+    rgba(255, 238, 214, 0.65) 60%,
+    rgba(255, 238, 214, 0.08) 100%
+  );
+}
+
+/* Texto por delante de la imagen */
+body[data-page="comunicacion"] .comunicacion-hero-contenido {
+  position: relative;
+  z-index: 2;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+  body[data-page="comunicacion"] .pagehead.comunicacion-hero {
+    min-height: 380px;
+  }
+
+  body[data-page="comunicacion"] .pagehead.comunicacion-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 238, 214, 0.97) 0%,
+      rgba(255, 238, 214, 0.88) 65%,
+      rgba(255, 238, 214, 0.50) 100%
+    );
+  }
+}
+/* ===== COMUNICACIÓN: IMAGEN A LA DERECHA ===== */
+
+body[data-page="comunicacion"] .pagehead.comunicacion-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 420px;
+  background: #FFEED6;
+}
+
+/* Imagen de fondo, ubicada a la derecha */
+body[data-page="comunicacion"] .comunicacion-hero-fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+body[data-page="comunicacion"] .comunicacion-hero-fondo img {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Difuminado suave entre el texto y la imagen */
+body[data-page="comunicacion"] .pagehead.comunicacion-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #FFEED6 0%,
+    #FFEED6 35%,
+    rgba(255, 238, 214, 0.92) 48%,
+    rgba(250, 173, 192, 0.16) 72%,
+    rgba(250, 173, 192, 0.04) 100%
+  );
+}
+
+/* Texto por delante de la imagen */
+body[data-page="comunicacion"] .comunicacion-hero-contenido {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 700px) {
+  body[data-page="comunicacion"] .pagehead.comunicacion-hero {
+    min-height: 380px;
+  }
+
+  body[data-page="comunicacion"] .comunicacion-hero-fondo img {
+    width: 100%;
+    opacity: 0.45;
+  }
+
+  body[data-page="comunicacion"] .pagehead.comunicacion-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 238, 214, 0.94),
+      rgba(250, 173, 192, 0.20)
+    );
+  }
+}
+
+/* ===== HERO DE COMUNICACIÓN ===== */
+
+body[data-page="comunicacion"] .pagehead.verbal-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 420px;
+  background: #FFEED6;
+}
+
+/* Imagen de fondo a la derecha */
+body[data-page="comunicacion"] .verbal-hero .publico-hero-fondo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  pointer-events: none;
+}
+
+body[data-page="comunicacion"] .verbal-hero .publico-hero-fondo img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% center;
+  display: block;
+}
+
+/* Difuminado crema y rosado muy suave */
+body[data-page="comunicacion"] .pagehead.verbal-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #FFEED6 0%,
+    rgba(255, 238, 214, 0.98) 32%,
+    rgba(255, 238, 214, 0.88) 45%,
+    rgba(250, 173, 192, 0.18) 70%,
+    rgba(250, 173, 192, 0.04) 100%
+  );
+}
+
+/* Texto por encima de la imagen */
+body[data-page="comunicacion"] .verbal-hero-contenido {
+  position: relative;
+  z-index: 2;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 700px) {
+  body[data-page="comunicacion"] .pagehead.verbal-hero {
+    min-height: 380px;
+  }
+
+  body[data-page="comunicacion"] .verbal-hero .publico-hero-fondo img {
+    width: 100%;
+    opacity: 0.55;
+  }
+
+  body[data-page="comunicacion"] .pagehead.verbal-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 238, 214, 0.96) 0%,
+      rgba(255, 238, 214, 0.82) 60%,
+      rgba(250, 173, 192, 0.20) 100%
+    );
+  }
+}
+
+/* ==========================================
+   SAMKANELI — PERSONALIDAD VERBAL
+   Rediseño de tarjetas interactivas
+   ========================================== */
+
+body[data-page="comunicacion"] #personalidad .five {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+  padding: 24px 0 18px;
+  margin: 0;
+  list-style: none;
+}
+
+body[data-page="comunicacion"] #personalidad .five-i {
+  --card-color: #FAADC0;
+  --card-ink: #7A4326;
+
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  min-width: 0;
+  min-height: 265px;
+  padding: 23px 20px 24px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 255, 255, 0.58) 0 48px,
+      transparent 49px
+    ),
+    var(--card-color);
+
+  border: 1px solid rgba(122, 67, 38, 0.07);
+  border-radius: 28px 28px 28px 12px;
+  box-shadow: 0 7px 0 rgba(122, 67, 38, 0.06);
+
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-radius 220ms ease;
+}
+
+/* Colores de las cinco tarjetas */
+body[data-page="comunicacion"] #personalidad .f1 {
+  --card-color: #FAADC0;
+}
+
+body[data-page="comunicacion"] #personalidad .f2 {
+  --card-color: #C0E3A1;
+}
+
+body[data-page="comunicacion"] #personalidad .f3 {
+  --card-color: #FFE2B5;
+}
+
+body[data-page="comunicacion"] #personalidad .f4 {
+  --card-color: #FFD9E5;
+}
+
+body[data-page="comunicacion"] #personalidad .f5 {
+  --card-color: #E3F1D4;
+}
+
+/* Número destacado */
+body[data-page="comunicacion"] #personalidad .five-i > span {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+
+  color: #FFFFFF;
+  background: var(--card-ink);
+  border: 3px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+
+  font-family: "Fredoka", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Texto de cada frase */
+body[data-page="comunicacion"] #personalidad .five-i p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  max-width: 230px;
+
+  color: var(--card-ink);
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(23px, 1.15vw, 18px);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+/* Ilustraciones decorativas */
+body[data-page="comunicacion"] #personalidad .five-i::after {
+  position: absolute;
+  z-index: 1;
+  top: 54px;
+  right: 12px;
+
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+
+  font-family: sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  opacity: 0.9;
+  pointer-events: none;
+
+  transform: rotate(8deg);
+  transition: transform 220ms ease;
+}
+
+body[data-page="comunicacion"] #personalidad .f1::after {
+  content: "💗";
+}
+
+body[data-page="comunicacion"] #personalidad .f2::after {
+  content: "🌿";
+}
+
+body[data-page="comunicacion"] #personalidad .f3::after {
+  content: "🥭";
+}
+
+body[data-page="comunicacion"] #personalidad .f4::after {
+  content: "💬";
+}
+
+body[data-page="comunicacion"] #personalidad .f5::after {
+  content: "🤎";
+}
+
+/* Pequeño detalle decorativo */
+body[data-page="comunicacion"] #personalidad .five-i::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: -22px;
+  bottom: -30px;
+  width: 105px;
+  height: 105px;
+  border: 2px dashed rgba(122, 67, 38, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Interacción con ratón */
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #personalidad .five-i:hover {
+    transform: translateY(-9px) rotate(-1deg);
+    border-radius: 18px 30px 18px 30px;
+    box-shadow: 0 15px 28px rgba(122, 67, 38, 0.13);
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i:hover::after {
+    transform: rotate(-8deg) scale(1.13);
+  }
+}
+
+/* Tabletas */
+@media (max-width: 1050px) {
+  body[data-page="comunicacion"] #personalidad .five {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i {
+    min-height: 230px;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i p {
+    font-size: 17px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 620px) {
+  body[data-page="comunicacion"] #personalidad .five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i {
+    min-height: 225px;
+    padding: 17px 15px 19px;
+    gap: 22px;
+    border-radius: 22px 22px 22px 10px;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i > span {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    font-size: 22px;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i::after {
+    top: 51px;
+    right: 3px;
+    width: 58px;
+    height: 58px;
+    font-size: 36px;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i p {
+    font-size: 15px;
+  }
+}
+
+/* Pantallas muy estrechas */
+@media (max-width: 360px) {
+  body[data-page="comunicacion"] #personalidad .five {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="comunicacion"] #personalidad .five-i {
+    min-height: 190px;
+  }
+}
+
+/* Respeta la preferencia de movimiento del usuario */
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="comunicacion"] #personalidad .five-i,
+  body[data-page="comunicacion"] #personalidad .five-i::after {
+    transition: none;
+  }
+}
+
+/* =========================================
+   TONO DE VOZ — DISEÑO INTERACTIVO SAMKANELI
+   ========================================= */
+
+body[data-page="comunicacion"] #tono .tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+  padding: 10px;
+  background: rgba(255, 205, 217, 0.726);
+  border: 1px solid rgba(122, 67, 38, 0.10);
+  border-radius: 22px;
+}
+
+body[data-page="comunicacion"] #tono .tab {
+  position: relative;
+  padding: 12px 19px;
+  border: 1px solid #ffb1c9;
+  border-radius: 999px;
+  background: #fff0f7;
+  color: #7A4326;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+body[data-page="comunicacion"] #tono .tab:hover {
+  transform: translateY(-3px);
+  background: #FFEED6;
+  box-shadow: 0 5px 12px rgba(122, 67, 38, 0.10);
+}
+
+body[data-page="comunicacion"] #tono .tab[aria-selected="true"] {
+  background: #7A4326;
+  border-color: #7A4326;
+  color: #FFFFFF;
+  box-shadow: 0 5px 0 rgba(122, 67, 38, 0.13);
+}
+
+/* Panel del principio seleccionado */
+body[data-page="comunicacion"] #tono .tab-panel:not([hidden]) {
+  position: relative;
+  padding: clamp(20px, 3vw, 34px);
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(250, 173, 192, 0.20),
+      transparent 230px
+    ),
+    #FFF9F0;
+  border: 1px solid #ffced6;
+  border-radius: 30px;
+  box-shadow: 0 12px 35px rgba(122, 67, 38, 0.07);
+  animation: tonoEntrada 350ms ease both;
+}
+
+@keyframes tonoEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Encabezado del principio */
+body[data-page="comunicacion"] #tono .pr-top {
+  position: relative;
+  padding: 0 0 20px 18px;
+  border-left: 5px solid #FAADC0;
+  margin-bottom: 24px;
+}
+
+body[data-page="comunicacion"] #tono .pr-top h3 {
+  margin: 0 0 8px;
+  color: #7A4326;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(26px, 3vw, 35px);
+  line-height: 1.15;
+}
+
+body[data-page="comunicacion"] #tono .pr-top .lead {
+  margin: 0;
+  max-width: 650px;
+  color: #79543F;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* Cuatro bloques */
+body[data-page="comunicacion"] #tono .pr-g {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+  align-items: stretch;
+}
+
+body[data-page="comunicacion"] #tono .pr-c {
+  position: relative;
+  min-width: 0;
+  padding: 24px 23px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 22px 22px 22px 9px;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-radius 200ms ease;
+}
+
+body[data-page="comunicacion"] #tono .pr-c h4 {
+  margin: 0 0 12px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+body[data-page="comunicacion"] #tono .pr-c p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* 1. Cómo suena: verde */
+body[data-page="comunicacion"] #tono .pr-c.ok {
+  background: #E5F2D7;
+  border-color: #D0E5B9;
+  color: #426A35;
+}
+
+body[data-page="comunicacion"] #tono .pr-c.ok h4 {
+  color: #416D32;
+}
+
+/* 2. Cómo no debe sonar: rosado */
+body[data-page="comunicacion"] #tono .pr-c.no {
+  background: #FBE2E9;
+  border-color: #F2C9D6;
+  color: #814B59;
+}
+
+body[data-page="comunicacion"] #tono .pr-c.no h4 {
+  color: #9C4561;
+}
+
+/* 3. Frase de ejemplo: protagonista */
+body[data-page="comunicacion"] #tono .pr-c.ex {
+  background: #FFD9E5;
+  border: 2px solid #F5B4C8;
+  color: #713D2A;
+  box-shadow: 0 7px 0 rgba(250, 173, 192, 0.22);
+}
+
+body[data-page="comunicacion"] #tono .pr-c.ex h4 {
+  color: #963B60;
+}
+
+body[data-page="comunicacion"] #tono .pr-c.ex p {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Etiqueta Propuesta */
+body[data-page="comunicacion"] #tono .pr-c.ex .badge {
+  display: inline-flex;
+  margin-top: 15px;
+  padding: 6px 12px;
+  border: 1px solid #D8759B;
+  border-radius: 999px;
+  background: #FFF4F7;
+  color: #963B60;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* 4. Dónde se usa: crema */
+body[data-page="comunicacion"] #tono .pr-c.ca {
+  background: #FFF0D7;
+  border-color: #ffb6c0;
+  color: #795137;
+}
+
+body[data-page="comunicacion"] #tono .pr-c.ca h4 {
+  color: #7A4326;
+}
+
+/* Efecto al pasar el cursor */
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #tono .pr-c:hover {
+    transform: translateY(-5px);
+    border-radius: 16px 24px 16px 24px;
+    box-shadow: 0 12px 24px rgba(122, 67, 38, 0.10);
+  }
+
+  body[data-page="comunicacion"] #tono .pr-c.ex:hover {
+    box-shadow: 0 14px 28px rgba(196, 92, 131, 0.17);
+  }
+}
+
+/* Tabletas y celulares */
+@media (max-width: 700px) {
+  body[data-page="comunicacion"] #tono .tabs-list {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  body[data-page="comunicacion"] #tono .tab {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  body[data-page="comunicacion"] #tono .pr-g {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  body[data-page="comunicacion"] #tono .pr-c {
+    padding: 21px;
+  }
+
+  body[data-page="comunicacion"] #tono .pr-top .lead {
+    font-size: 16px;
+  }
+}
+
+/* Accesibilidad: reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="comunicacion"] #tono .tab,
+  body[data-page="comunicacion"] #tono .pr-c {
+    transition: none;
+  }
+
+  body[data-page="comunicacion"] #tono .tab-panel:not([hidden]) {
+    animation: none;
+  }
+}
+
+/* ==========================================
+   MENSAJES DE EJEMPLO — SAMKANELI
+   ========================================== */
+
+body[data-page="comunicacion"] #ejemplos .cv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  margin-top: 30px;
+}
+
+/* Tarjeta de cada situación */
+body[data-page="comunicacion"] #ejemplos .cv {
+  position: relative;
+  min-width: 0;
+  padding: 17px;
+  background: #FFF9F0;
+  border: 1px solid rgba(122, 67, 38, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 7px 0 rgba(122, 67, 38, 0.05);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+body[data-page="comunicacion"] #ejemplos .cv:nth-child(3n + 1) {
+  border-top: 5px solid #FAADC0;
+}
+
+body[data-page="comunicacion"] #ejemplos .cv:nth-child(3n + 2) {
+  border-top: 5px solid #C0E3A1;
+}
+
+body[data-page="comunicacion"] #ejemplos .cv:nth-child(3n) {
+  border-top: 5px solid #FFD9A8;
+}
+
+body[data-page="comunicacion"] #ejemplos .cv:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 28px rgba(122, 67, 38, 0.11);
+}
+
+/* Título de cada situación */
+body[data-page="comunicacion"] #ejemplos .cv figcaption {
+  color: #7A4326;
+  font-family: "Fredoka", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+body[data-page="comunicacion"] #ejemplos .cv > figcaption {
+  margin: 0 0 14px;
+}
+
+/* Ventana de conversación */
+body[data-page="comunicacion"] #ejemplos .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-width: 0;
+  padding: 15px;
+  background:
+    radial-gradient(circle at 100% 100%,
+      rgba(192, 227, 161, 0.18), transparent 150px),
+    #F4EBDD;
+  border: 1px solid #E8D8C6;
+  border-radius: 19px;
+}
+
+/* Encabezado con mascota y nombre */
+body[data-page="comunicacion"] #ejemplos .chat-h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 37px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(122, 67, 38, 0.12);
+  color: #7A4326;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+body[data-page="comunicacion"] #ejemplos .chat-h img {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 2px 7px rgba(122, 67, 38, 0.12);
+}
+
+/* Burbujas de mensajes */
+body[data-page="comunicacion"] #ejemplos .msg {
+  max-width: 91%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  transition: transform 180ms ease;
+}
+
+body[data-page="comunicacion"] #ejemplos .msg.in {
+  align-self: flex-start;
+  color: #7A4326;
+  background: #FFFFFF;
+  border: 1px solid #E8D8C6;
+  border-bottom-left-radius: 5px;
+}
+
+body[data-page="comunicacion"] #ejemplos .msg.out {
+  align-self: flex-end;
+  color: #38532B;
+  background: #DDF0CD;
+  border: 1px solid #C0E3A1;
+  border-bottom-right-radius: 5px;
+}
+
+/* Detalle al pasar sobre una burbuja */
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #ejemplos .msg:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Nota de propuesta */
+body[data-page="comunicacion"] #ejemplos > .wrap > .muted {
+  margin-top: 24px;
+  padding: 14px 17px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px dashed #D8B9A4;
+  border-radius: 16px;
+  line-height: 1.7;
+}
+
+/* Tabletas */
+@media (max-width: 950px) {
+  body[data-page="comunicacion"] #ejemplos .cv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  body[data-page="comunicacion"] #ejemplos .cv-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  body[data-page="comunicacion"] #ejemplos .cv {
+    padding: 14px;
+    border-radius: 21px;
+  }
+
+  body[data-page="comunicacion"] #ejemplos .cv figcaption {
+    font-size: 18px;
+  }
+
+  body[data-page="comunicacion"] #ejemplos .chat {
+    padding: 13px;
+  }
+
+  body[data-page="comunicacion"] #ejemplos .msg {
+    max-width: 95%;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="comunicacion"] #ejemplos .cv,
+  body[data-page="comunicacion"] #ejemplos .msg {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   COMPARACIÓN DE RESPUESTAS — SAMKANELI
+   ========================================== */
+
+body[data-page="comunicacion"] #comparar .cmp {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+/* Tarjetas principales */
+body[data-page="comunicacion"] #comparar .cmp > figure {
+  --cmp-color: #C0E3A1;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  margin: 0;
+  padding: 17px;
+  border: 1px solid rgba(122, 67, 38, 0.12);
+  border-top: 5px solid var(--cmp-color);
+  border-radius: 25px;
+  background: #FFF9F0;
+  box-shadow: 0 8px 0 rgba(122, 67, 38, 0.05);
+
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease;
+}
+
+/* Colores propios de cada respuesta */
+body[data-page="comunicacion"] #comparar .cmp > figure:nth-child(1) {
+  --cmp-color: #A9D98A;
+  background: linear-gradient(160deg, #F7FFEF, #FFFFFF);
+}
+
+body[data-page="comunicacion"] #comparar .cmp > figure:nth-child(2) {
+  --cmp-color: #D8C8B8;
+  background: linear-gradient(160deg, #F8F1E9, #FFFFFF);
+}
+
+body[data-page="comunicacion"] #comparar .cmp > figure:nth-child(3) {
+  --cmp-color: #FFD77E;
+  background: linear-gradient(160deg, #FFF8E4, #FFFFFF);
+}
+
+/* Primera tarjeta: recomendada */
+body[data-page="comunicacion"] #comparar .cmp > figure:nth-child(1) {
+  box-shadow: 0 8px 0 rgba(192, 227, 161, 0.28);
+}
+
+/* Movimiento al pasar el cursor */
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #comparar .cmp > figure:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 17px 30px rgba(122, 67, 38, 0.12);
+  }
+
+  body[data-page="comunicacion"] #comparar .cmp > figure:nth-child(1):hover {
+    box-shadow: 0 17px 32px rgba(91, 146, 65, 0.17);
+  }
+}
+
+/* Ventana de conversación */
+body[data-page="comunicacion"] #comparar .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #E9D9C7;
+  border-radius: 19px;
+  background: #F3E9DB;
+}
+
+/* Encabezado de la conversación */
+body[data-page="comunicacion"] #comparar .chat-h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(122, 67, 38, 0.12);
+  color: #7A4326;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+body[data-page="comunicacion"] #comparar .chat-h img {
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  object-fit: cover;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(122, 67, 38, 0.12);
+}
+
+/* Burbujas de conversación */
+body[data-page="comunicacion"] #comparar .msg {
+  max-width: 95%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  transition: transform 180ms ease;
+}
+
+body[data-page="comunicacion"] #comparar .msg.in {
+  align-self: flex-start;
+  color: #704832;
+  background: #FFFFFF;
+  border: 1px solid #E9D9C7;
+  border-bottom-left-radius: 5px;
+}
+
+body[data-page="comunicacion"] #comparar .msg.out {
+  align-self: flex-end;
+  color: #38532B;
+  background: #DDF0CD;
+  border: 1px solid #C0E3A1;
+  border-bottom-right-radius: 5px;
+}
+
+body[data-page="comunicacion"] #comparar .tone-fria .msg.out {
+  color: #655C55;
+  background: #E9E5E1;
+  border-color: #DAD3CD;
+}
+
+body[data-page="comunicacion"] #comparar .tone-exagerada .msg.out {
+  color: #704719;
+  background: #FFE29A;
+  border-color: #F5D17A;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #comparar .msg:hover {
+    transform: scale(1.025);
+  }
+}
+
+/* Etiquetas inferiores */
+body[data-page="comunicacion"] #comparar .cmp > figure > figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #79543F;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+body[data-page="comunicacion"] #comparar .cmp .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Adecuada */
+body[data-page="comunicacion"] #comparar .cmp .t1 {
+  color: #315C29;
+  background: #DDF0CD;
+  border: 1px solid #C0E3A1;
+}
+
+/* Demasiado fría */
+body[data-page="comunicacion"] #comparar .cmp .t2 {
+  color: #66574C;
+  background: #EAE2DA;
+  border: 1px solid #D8C8B8;
+}
+
+/* Exagerada */
+body[data-page="comunicacion"] #comparar .cmp .t3 {
+  color: #80511A;
+  background: #FFE8AC;
+  border: 1px solid #F5D17A;
+}
+
+/* Tabletas */
+@media (max-width: 900px) {
+  body[data-page="comunicacion"] #comparar .cmp {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  body[data-page="comunicacion"] #comparar .cmp > figure:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Celulares */
+@media (max-width: 580px) {
+  body[data-page="comunicacion"] #comparar .cmp {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  body[data-page="comunicacion"] #comparar .cmp > figure:first-child {
+    grid-column: auto;
+  }
+
+  body[data-page="comunicacion"] #comparar .cmp > figure {
+    padding: 14px;
+    border-radius: 21px;
+  }
+
+  body[data-page="comunicacion"] #comparar .chat {
+    padding: 13px;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="comunicacion"] #comparar .cmp > figure,
+  body[data-page="comunicacion"] #comparar .msg {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   EXPLORADOR GRÁFICO — SAMKANELI
+   ========================================== */
+
+body[data-page="comunicacion"] #explorar .tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 24px;
+  padding: 10px;
+  border: 1px solid rgba(122, 67, 38, .10);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .65);
+}
+
+body[data-page="comunicacion"] #explorar .tab {
+  padding: 12px 17px;
+  border: 1px solid #E8CBB8;
+  border-radius: 15px;
+  background: #FFF9F0;
+  color: #7A4326;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .22s ease;
+}
+
+body[data-page="comunicacion"] #explorar .tab:hover {
+  transform: translateY(-3px);
+  background: #FFEED6;
+  box-shadow: 0 7px 15px rgba(122, 67, 38, .10);
+}
+
+body[data-page="comunicacion"] #explorar .tab[aria-selected="true"] {
+  color: #FFFFFF;
+  background: #7A4326;
+  border-color: #7A4326;
+  box-shadow: 0 5px 0 rgba(122, 67, 38, .12);
+}
+
+/* Panel principal con decoración */
+body[data-page="comunicacion"] #explorar .tab-panel:not([hidden]) {
+  position: relative;
+  isolation: isolate;
+  padding: clamp(20px, 3vw, 34px);
+  overflow: hidden;
+  border: 1px solid #F0D3D9;
+  border-radius: 30px;
+  background:
+    radial-gradient(ellipse at 100% 0%,
+      rgba(250, 173, 192, .30), transparent 240px),
+    radial-gradient(ellipse at 0% 100%,
+      rgba(192, 227, 161, .25), transparent 220px),
+    #FFF9F0;
+  box-shadow: 0 12px 30px rgba(122, 67, 38, .07);
+  animation: samkaneliExplora .3s ease both;
+}
+
+@keyframes samkaneliExplora {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Elementos gráficos decorativos */
+body[data-page="comunicacion"] #explorar .tab-panel::after {
+  position: absolute;
+  z-index: -1;
+  top: 8px;
+  right: 22px;
+  font-size: clamp(42px, 6vw, 72px);
+  opacity: .20;
+  transform: rotate(10deg);
+  pointer-events: none;
+}
+
+body[data-page="comunicacion"] #explorar #explorar-p0::after {
+  content: "💗";
+}
+
+body[data-page="comunicacion"] #explorar #explorar-p1::after {
+  content: "🌿";
+}
+
+body[data-page="comunicacion"] #explorar #explorar-p2::after {
+  content: "📱";
+}
+
+body[data-page="comunicacion"] #explorar #explorar-p3::after {
+  content: "🎬";
+}
+
+body[data-page="comunicacion"] #explorar #explorar-p4::after {
+  content: "💌";
+}
+
+body[data-page="comunicacion"] #explorar #explorar-p5::after {
+  content: "✨";
+}
+
+/* Colección de frases y palabras */
+body[data-page="comunicacion"] #explorar .pill-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  min-height: 135px;
+  padding: 20px;
+  overflow-wrap: anywhere;
+  border: 1px solid #F0C8D4;
+  border-radius: 23px 23px 23px 8px;
+  background: #FFFFFF;
+  color: #7A4326;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  box-shadow: 0 6px 0 rgba(250, 173, 192, .22);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li::before {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  border-radius: 15px;
+  background: #FFE1E9;
+  font-size: 25px;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(1)::before {
+  content: "💗";
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(2)::before {
+  content: "🌿";
+  background: #E4F2D8;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(3)::before {
+  content: "🧁";
+  background: #FFE9BF;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(4)::before {
+  content: "😊";
+  background: #E4F2D8;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(5)::before {
+  content: "🌸";
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(6)::before {
+  content: "🤎";
+  background: #F1E0D2;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(7)::before {
+  content: "🌴";
+  background: #E4F2D8;
+}
+
+body[data-page="comunicacion"] #explorar .pill-list li:nth-child(8)::before {
+  content: "✨";
+  background: #FFE9BF;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #explorar .pill-list li:hover {
+    transform: translateY(-6px) rotate(-.5deg);
+    box-shadow: 0 14px 25px rgba(122, 67, 38, .11);
+  }
+}
+
+/* Tarjetas gráficas para publicaciones */
+body[data-page="comunicacion"] #explorar .g3.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+body[data-page="comunicacion"] #explorar .card.plain {
+  position: relative;
+  padding: 23px;
+  overflow: hidden;
+  border: 1px solid #E9D5C7;
+  border-radius: 24px 24px 24px 9px;
+  background: #FFFFFF;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+body[data-page="comunicacion"] #explorar .card.plain::before {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: #FFE1E9;
+  font-size: 29px;
+}
+
+body[data-page="comunicacion"] #explorar .card.plain:nth-child(1)::before {
+  content: "📣";
+}
+
+body[data-page="comunicacion"] #explorar .card.plain:nth-child(2)::before {
+  content: "📸";
+  background: #E4F2D8;
+}
+
+body[data-page="comunicacion"] #explorar .card.plain:nth-child(3)::before {
+  content: "🥭";
+  background: #FFE9BF;
+}
+
+body[data-page="comunicacion"] #explorar .card.plain h4 {
+  margin-top: 0;
+  color: #7A4326;
+  font-family: "Fredoka", sans-serif;
+  font-size: 20px;
+}
+
+body[data-page="comunicacion"] #explorar .card.plain p {
+  color: #79543F;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body[data-page="comunicacion"] #explorar .card.plain:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(122, 67, 38, .11);
+  }
+}
+
+/* Pasos del video y listas */
+body[data-page="comunicacion"] #explorar .check-list {
+  display: grid;
+  gap: 13px;
+  padding-left: 28px;
+  color: #704832;
+}
+
+body[data-page="comunicacion"] #explorar .check-list li {
+  padding: 15px 18px;
+  border: 1px solid #E9D5C7;
+  border-radius: 16px;
+  background: #FFFFFF;
+  line-height: 1.7;
+}
+
+body[data-page="comunicacion"] #explorar .check-list:not(.no) li::marker {
+  color: #C75D83;
+  font-weight: 900;
+}
+
+body[data-page="comunicacion"] #explorar .check-list.no li {
+  border-left: 5px solid #FAADC0;
+}
+
+/* Texto aclaratorio */
+body[data-page="comunicacion"] #explorar .muted {
+  color: #8C6550;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Tabletas */
+@media (max-width: 800px) {
+  body[data-page="comunicacion"] #explorar .pill-list,
+  body[data-page="comunicacion"] #explorar .g3.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+@media (max-width: 520px) {
+  body[data-page="comunicacion"] #explorar .pill-list,
+  body[data-page="comunicacion"] #explorar .g3.grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="comunicacion"] #explorar .pill-list li {
+    min-height: 110px;
+  }
+
+  body[data-page="comunicacion"] #explorar .tabs-list {
+    gap: 8px;
+  }
+
+  body[data-page="comunicacion"] #explorar .tab {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="comunicacion"] #explorar .tab,
+  body[data-page="comunicacion"] #explorar .pill-list li,
+  body[data-page="comunicacion"] #explorar .card.plain {
+    transition: none;
+  }
+
+  body[data-page="comunicacion"] #explorar .tab-panel:not([hidden]) {
+    animation: none;
+  }
+}
+/* ========================================
+   FRANJA VERDE ANIMADA SAMKANELI
+======================================== */
+
+.franja-sabores {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 42px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #b9e39b;
+  border-top: 3px solid #fff;
+  color: #713b20;
+}
+
+.franja-sabores-pista {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  width: max-content;
+  min-width: max-content;
+  animation: franjaSamkaneli 34s linear infinite;
+}
+
+.franja-sabores-pista span {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.franja-sabores:hover .franja-sabores-pista {
+  animation-play-state: paused;
+}
+@keyframes franjaSamkaneli {
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 520px) {
+  .franja-sabores {
+      height: 38px;
+  }
+
+  .franja-sabores-pista {
+      gap: 25px;
+      animation-duration: 27s;
+  }
+
+  .franja-sabores-pista span {
+      font-size: 10px;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .franja-sabores-pista {
+      animation: none;
+  }
+}
+
+

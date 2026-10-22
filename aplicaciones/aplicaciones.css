@@ -1,0 +1,575 @@
+
+/* aplicaciones.css */
+
+.ap-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s3);
+  align-items: center;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: var(--s2);
+}
+
+.chip {
+  font: 700 1rem var(--f-body);
+  border: 2px solid var(--marron);
+  background: var(--crema-claro);
+  color: var(--marron);
+  border-radius: var(--r-pill);
+  padding: .5rem 1.1rem;
+  cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--marron);
+  color: var(--crema);
+}
+
+.legend-s {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: var(--s2) 0 var(--s3);
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+  align-items: start;
+  margin-bottom: var(--s3);
+}
+
+@media (max-width: 980px) {
+  .apps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .apps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.app {
+  background: var(--crema-claro);
+  border: 2px solid rgba(122, 67, 38, .12);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app[hidden] {
+  display: none;
+}
+
+.app-media {
+  aspect-ratio: 4 / 3;
+  background: var(--verde-suave);
+  overflow: hidden;
+}
+
+.app-media img {
+  width: 100%;
+  height: 100%;
+}
+
+.app-media .ph {
+  height: 100%;
+  border-radius: 0;
+  border-width: 0 0 3px;
+}
+
+.app-media img.fit-contain {
+  background: var(--rosa-suave);
+}
+
+.app-body {
+  padding: var(--s3);
+}
+
+.app-body h3 {
+  margin-bottom: .4rem;
+}
+
+.app-st {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+}
+
+.app-body details.acc {
+  margin: var(--s2) 0 0;
+  background: var(--crema);
+  padding: .1rem 1rem;
+}
+
+.app-body details.acc summary {
+  font-size: 1rem;
+  padding: .6rem 0;
+}
+
+.app-body details.acc p {
+  font-size: .95rem;
+  margin-bottom: .5rem;
+}
+
+
+/* =========================================================
+   SAMKANELI — APLICACIONES DE MARCA
+   Fondo completo, imagen nítida y filtro rosado suave
+========================================================= */
+
+body[data-page="aplicaciones"] .pagehead {
+  position: relative !important;
+  isolation: isolate;
+  display: flex !important;
+  align-items: center !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 760px !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 90px 0 !important;
+
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background: #fff0e3 !important;
+}
+
+/* Contenedor del contenido */
+body[data-page="aplicaciones"] .pagehead > .wrap.split {
+  position: relative !important;
+  z-index: 2;
+
+  display: flex !important;
+  align-items: center !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 560px !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 5% !important;
+  box-sizing: border-box !important;
+}
+
+/* Columna del texto */
+body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+  position: relative !important;
+  z-index: 3;
+
+  width: 58%;
+  max-width: 900px;
+  flex: 0 1 900px;
+}
+
+/* Imagen extendida por todo el encabezado */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Imagen nítida: sin desenfoque ni filtros */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo img {
+  position: absolute !important;
+  inset: 0 !important;
+
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Filtro rosado transparente y discreto */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: rgba(255, 190, 205, 0.14);
+  pointer-events: none;
+}
+
+/* Título principal */
+body[data-page="aplicaciones"] .pagehead h1 {
+  position: relative;
+  z-index: 3;
+
+  max-width: 850px;
+  color: #4f2818;
+  line-height: 1.08;
+
+  text-shadow: none;
+}
+
+/* Descripción */
+body[data-page="aplicaciones"] .pagehead .lead {
+  position: relative;
+  z-index: 3;
+
+  max-width: 800px;
+  color: #603723;
+  line-height: 1.7;
+}
+
+/* Migas de navegación y etiqueta */
+body[data-page="aplicaciones"] .pagehead .crumbs,
+body[data-page="aplicaciones"] .pagehead .eyebrow {
+  position: relative;
+  z-index: 3;
+}
+
+/* Evitar bordes redondeados en la imagen */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual {
+  border-radius: 0 !important;
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+  body[data-page="aplicaciones"] .pagehead {
+    min-height: 680px !important;
+    padding: 70px 0 !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split {
+    min-height: 520px !important;
+    padding: 0 4% !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+    width: 70%;
+  }
+}
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+  body[data-page="aplicaciones"] .pagehead {
+    min-height: 680px !important;
+    padding: 55px 0 !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split {
+    min-height: 560px !important;
+    padding: 0 22px !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+    width: 100%;
+    max-width: none;
+    flex-basis: 100%;
+  }
+
+  body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo img {
+    object-position: 62% center !important;
+  }
+
+  /* Un poco más de rosado en pantallas pequeñas */
+  body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo::after {
+    background: rgba(255, 190, 205, 0.20);
+  }
+}
+
+/* =========================================
+   CORRECCIÓN FINAL DEL FONDO DE APLICACIONES
+   Imagen hasta arriba + filtro rosado
+========================================= */
+
+body[data-page="aplicaciones"] .pagehead {
+  position: relative !important;
+  isolation: isolate !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 760px !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  box-sizing: border-box !important;
+}
+
+/* Eliminar el espacio superior del contenedor */
+body[data-page="aplicaciones"] .pagehead > .wrap.split {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 760px !important;
+  margin: 0 !important;
+  padding: 100px 5% 70px !important;
+  box-sizing: border-box !important;
+}
+
+/* Imagen extendida desde el borde superior hasta el inferior */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+}
+
+/* Imagen completamente nítida */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+
+/* Filtro rosado más intenso sobre la imagen */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 170, 195, 0.48) 0%,
+    rgba(255, 190, 205, 0.34) 55%,
+    rgba(255, 210, 215, 0.22) 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* Texto por encima de la imagen */
+body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 58%;
+  max-width: 900px;
+}
+
+/* Evitar espacios generados por la imagen */
+body[data-page="aplicaciones"] .pagehead .pagehead-visual {
+  border-radius: 0 !important;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  body[data-page="aplicaciones"] .pagehead,
+  body[data-page="aplicaciones"] .pagehead > .wrap.split {
+    min-height: 680px !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split {
+    padding: 80px 4% 60px !important;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+  body[data-page="aplicaciones"] .pagehead,
+  body[data-page="aplicaciones"] .pagehead > .wrap.split {
+    min-height: 680px !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split {
+    padding: 65px 22px 50px !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+    width: 100%;
+    max-width: none;
+  }
+
+  body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo img {
+    object-position: 62% center !important;
+  }
+
+  body[data-page="aplicaciones"] .pagehead .pagehead-visual.pagehead-fondo::after {
+    background: rgba(255, 175, 195, 0.28) !important;
+  }
+}
+
+/* ==========================================
+   MEJORAR LEGIBILIDAD DEL TEXTO DEL ENCABEZADO
+========================================== */
+
+/* Panel suave detrás del texto */
+body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 62%;
+  max-width: 920px;
+  padding: 28px 32px;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 241, 231, 0.88) 0%,
+    rgba(255, 241, 231, 0.72) 72%,
+    rgba(255, 241, 231, 0.12) 100%
+  );
+
+  box-sizing: border-box;
+}
+
+/* Título principal */
+body[data-page="aplicaciones"] .pagehead h1 {
+  color: #4b2819 !important;
+  text-shadow: none !important;
+  line-height: 1.08;
+}
+
+/* Descripción */
+body[data-page="aplicaciones"] .pagehead .lead {
+  color: #542d1d !important;
+  font-weight: 500;
+  line-height: 1.75;
+  text-shadow: none !important;
+}
+
+/* Etiqueta superior */
+body[data-page="aplicaciones"] .pagehead .eyebrow {
+  color: #a82f67 !important;
+  font-weight: 800;
+}
+
+/* Migas de navegación */
+body[data-page="aplicaciones"] .pagehead .crumbs {
+  color: #754b38 !important;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  body[data-page="aplicaciones"] .pagehead > .wrap.split > div:first-child {
+    width: 100%;
+    padding: 22px 20px;
+    border-radius: 18px;
+
+    background: rgba(255, 241, 231, 0.86);
+  }
+}
+
+/* ========================================
+   FRANJA VERDE ANIMADA SAMKANELI
+======================================== */
+
+.franja-sabores {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 42px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #b9e39b;
+  border-top: 3px solid #fff;
+  color: #713b20;
+}
+
+.franja-sabores-pista {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  width: max-content;
+  min-width: max-content;
+  animation: franjaSamkaneli 34s linear infinite;
+}
+
+.franja-sabores-pista span {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.franja-sabores:hover .franja-sabores-pista {
+  animation-play-state: paused;
+}
+
+@keyframes franjaSamkaneli {
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+/* Adaptación para celulares */
+@media (max-width: 520px) {
+  .franja-sabores {
+      height: 38px;
+  }
+
+  .franja-sabores-pista {
+      gap: 25px;
+      animation-duration: 27s;
+  }
+
+  .franja-sabores-pista span {
+      font-size: 10px;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .franja-sabores-pista {
+      animation: none;
+  }
+}
+
+

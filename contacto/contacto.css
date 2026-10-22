@@ -1,0 +1,1043 @@
+
+/* =========================================================
+   CONTACTO.CSS — SAMKANELI
+   ========================================================= */
+
+/* Imagen principal y mascota */
+.ct-hero {
+    position: relative;
+    max-width: 460px;
+    margin-inline: auto;
+  }
+  
+  .ct-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 58% 42% 55% 45% / 48% 55% 45% 52%;
+    box-shadow: var(--sombra);
+  }
+  
+  .ct-m {
+    position: absolute;
+    width: 32%;
+    right: -4%;
+    bottom: -6%;
+    filter: drop-shadow(0 8px 10px rgba(122, 67, 38, 0.25));
+  }
+  
+  /* Tarjetas y textos */
+  .ch p {
+    margin-bottom: 0.6rem;
+  }
+  
+  /* Aviso del formulario */
+  .notice {
+    background: #FFE3B8;
+    border-left: 8px solid var(--marron);
+    border-radius: var(--r-sm);
+    padding: var(--s2) var(--s3);
+  }
+  
+  /* Formulario de contacto */
+  .form {
+    background: var(--crema-claro);
+    border-radius: var(--r-lg);
+    padding: var(--s4);
+    border: 2px solid rgba(122, 67, 38, 0.12);
+    display: grid;
+    gap: var(--s2);
+  }
+  
+  /* Etiquetas y campos */
+  .fld label {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+  
+  .fld input,
+  .fld textarea {
+    width: 100%;
+    font: inherit;
+    color: var(--marron-osc);
+    background: #fff;
+    border: 2px solid var(--marron);
+    border-radius: var(--r-sm);
+    padding: 0.7rem 1rem;
+  }
+  
+  /* Campos con errores */
+  .fld input[aria-invalid="true"],
+  .fld textarea[aria-invalid="true"] {
+    border-color: var(--rosa-texto);
+    background: #FFF1F6;
+  }
+  
+  /* Mensajes de validación */
+  .err {
+    color: var(--rosa-texto);
+    font-weight: 700;
+    margin: 0.3rem 0 0;
+    font-size: 0.92rem;
+  }
+  
+  .form-msg {
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .form-msg.ok {
+    color: var(--verde-texto);
+  }
+  
+  .form-msg.err {
+    color: var(--rosa-texto);
+  }
+  
+  /* Propuesta de presencia digital */
+  .dig {
+    background: var(--crema-claro);
+    border-radius: var(--r-lg);
+    padding: var(--s3);
+    display: grid;
+    gap: var(--s2);
+  }
+  
+  .dig-av img {
+    width: 120px;
+    border-radius: 50%;
+    margin-inline: auto;
+  }
+  
+  .dig ul {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  
+  /* Sección final */
+  .close {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s4);
+    align-items: center;
+  }
+  
+  /* Adaptación para pantallas pequeñas */
+  @media (max-width: 860px) {
+    .close {
+      grid-template-columns: 1fr;
+    }
+  }
+/* ========================================
+   FRANJA VERDE ANIMADA SAMKANELI
+======================================== */
+
+.franja-sabores {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #b9e39b;
+    border-top: 3px solid #fff;
+    color: #713b20;
+  }
+  
+  .franja-sabores-pista {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    width: max-content;
+    min-width: max-content;
+    animation: franjaSamkaneli 34s linear infinite;
+  }
+  
+  .franja-sabores-pista span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  
+  .franja-sabores:hover .franja-sabores-pista {
+    animation-play-state: paused;
+  }
+  @keyframes franjaSamkaneli {
+    to {
+        transform: translateX(-50%);
+    }
+  }
+  
+  /* Adaptación para celulares */
+  @media (max-width: 520px) {
+    .franja-sabores {
+        height: 38px;
+    }
+  
+    .franja-sabores-pista {
+        gap: 25px;
+        animation-duration: 27s;
+    }
+  
+    .franja-sabores-pista span {
+        font-size: 10px;
+    }
+  }
+  
+  /* Accesibilidad */
+  @media (prefers-reduced-motion: reduce) {
+    .franja-sabores-pista {
+        animation: none;
+    }
+  }  
+  
+/* ==========================================
+   SAMKANELI — REDES SOCIALES Y CONTACTO
+========================================== */
+
+.sam-redes {
+  --sam-crema: #FFEED6;
+  --sam-marron: #7A4326;
+  --sam-rosa: #FAADC0;
+  --sam-verde: #C0E3A1;
+  --sam-blanco: #fffdf8;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 76px 24px 90px;
+  background:
+    radial-gradient(ellipse at 10% 10%,
+      rgba(255,255,255,.65), transparent 35%),
+    linear-gradient(135deg,
+      #e9f5db 0%,
+      var(--sam-verde) 55%,
+      #f7f0dc 100%);
+  color: var(--sam-marron);
+  font-family: "Nunito", sans-serif;
+}
+
+.sam-redes *,
+.sam-redes *::before,
+.sam-redes *::after {
+  box-sizing: border-box;
+}
+
+.sam-redes__contenedor {
+  position: relative;
+  width: min(100%, 1440px);
+  margin: 0 auto;
+}
+
+.sam-redes__decoracion {
+  position: absolute;
+  z-index: -1;
+  color: var(--sam-rosa);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.sam-redes__decoracion--uno {
+  top: 40px;
+  left: 2%;
+  font-size: 90px;
+  transform: rotate(-15deg);
+}
+
+.sam-redes__decoracion--dos {
+  right: 3%;
+  bottom: 35px;
+  font-size: 100px;
+  transform: rotate(15deg);
+}
+
+.sam-redes__cabecera {
+  position: relative;
+  max-width: 850px;
+  margin-bottom: 42px;
+}
+
+.sam-redes__etiqueta {
+  display: inline-block;
+  padding: 10px 17px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(122,67,38,.2);
+  border-radius: 30px;
+  background: var(--sam-blanco);
+  color: var(--sam-marron);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.sam-redes__etiqueta span {
+  color: #df7597;
+}
+
+.sam-redes__cabecera h2 {
+  margin: 0 0 18px;
+  color: var(--sam-marron);
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.sam-redes__cabecera h2 span {
+  color: #4d793c;
+}
+
+.sam-redes__cabecera p {
+  max-width: 670px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.sam-redes__sabores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.sam-redes__sabores span {
+  padding: 9px 14px;
+  border: 1px solid rgba(122,67,38,.2);
+  border-radius: 25px;
+  background: rgba(255,238,214,.8);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sam-redes__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.sam-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 25px;
+  background: var(--sam-blanco);
+  box-shadow: 0 10px 28px rgba(83,73,42,.09);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.sam-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 42px rgba(83,73,42,.18);
+}
+
+.sam-card__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  margin-bottom: 14px;
+}
+
+.sam-card__icono {
+  display: grid;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid #f3cbd4;
+  border-radius: 50%;
+  background: var(--sam-crema);
+  color: var(--sam-marron);
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.sam-card__cabecera h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.sam-card__estado {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: var(--sam-marron);
+  color: white;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .4px;
+}
+
+.sam-card__imagen {
+  position: relative;
+  display: block;
+  height: 205px;
+  margin-bottom: 19px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: var(--sam-crema);
+  text-decoration: none;
+}
+
+.sam-card__imagen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+
+.sam-card:hover .sam-card__imagen img {
+  transform: scale(1.07);
+}
+
+.sam-card__ver {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 9px 12px;
+  border-radius: 25px;
+  background: var(--sam-rosa);
+  color: var(--sam-marron);
+  font-size: 12px;
+  font-weight: 900;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: .25s ease;
+}
+
+.sam-card:hover .sam-card__ver,
+.sam-card__imagen:focus-visible .sam-card__ver {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sam-card h4 {
+  margin: 0 0 9px;
+  color: var(--sam-marron);
+  font-family: "Fredoka", sans-serif;
+  font-size: 21px;
+  overflow-wrap: anywhere;
+}
+
+.sam-card > p {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.sam-card__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.sam-card__etiquetas span {
+  padding: 7px 10px;
+  border: 1px solid #d8c3a9;
+  border-radius: 22px;
+  background: #fffaf1;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.sam-card__acciones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.sam-btn {
+  display: flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: 1px solid var(--sam-marron);
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.sam-btn:hover {
+  transform: translateY(-2px);
+}
+
+.sam-btn--principal {
+  background: var(--sam-marron);
+  color: white;
+}
+
+.sam-btn--principal:hover {
+  background: #59301c;
+}
+
+.sam-btn--secundario {
+  background: transparent;
+  color: var(--sam-marron);
+}
+
+.sam-btn--secundario:hover {
+  background: var(--sam-rosa);
+}
+
+.sam-btn:focus-visible,
+.sam-card__imagen:focus-visible {
+  outline: 3px solid #df7597;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  .sam-redes__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sam-card__imagen {
+    height: 240px;
+  }
+}
+
+@media (max-width: 560px) {
+  .sam-redes {
+    padding: 45px 16px 60px;
+  }
+
+  .sam-redes__cabecera h2 {
+    font-size: clamp(36px, 10vw, 48px);
+    letter-spacing: -.7px;
+  }
+
+  .sam-redes__cabecera p {
+    font-size: 15px;
+  }
+
+  .sam-redes__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sam-card__imagen {
+    height: 250px;
+  }
+
+  .sam-card__ver {
+    opacity: 1;
+    transform: none;
+  }
+
+  .sam-redes__decoracion--uno {
+    font-size: 50px;
+  }
+
+  .sam-redes__decoracion--dos {
+    font-size: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sam-card,
+  .sam-card__imagen img,
+  .sam-btn,
+  .sam-card__ver {
+    transition: none !important;
+  }
+}
+
+
+/* SAMKANELI — CONTACTO ILUSTRADO */
+
+.sam-contacto {
+  --rosa: #FAADC0;
+  --rosa-fondo: #FFE1E8;
+  --crema: #FFEED6;
+  --marron: #7A4326;
+  --verde: #C0E3A1;
+  --blanco: #FFFCF6;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 65px 5%;
+  background:
+    radial-gradient(ellipse at 15% 25%,
+      rgba(255,255,255,.72), transparent 35%),
+    radial-gradient(ellipse at 88% 75%,
+      rgba(250,173,192,.55), transparent 36%),
+    linear-gradient(130deg, #ffe9df, #ffdce7 56%, #fff0d9);
+  color: var(--marron);
+  font-family: "Nunito", sans-serif;
+}
+
+.sam-contacto *,
+.sam-contacto *::before,
+.sam-contacto *::after {
+  box-sizing: border-box;
+}
+
+.sam-contacto__layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr .95fr;
+  align-items: center;
+  gap: clamp(35px, 5vw, 75px);
+  width: min(100%, 1280px);
+  margin: auto;
+}
+
+.sam-presentacion {
+  min-width: 0;
+}
+
+.sam-sobrelinea {
+  display: inline-block;
+  padding: 12px 22px;
+  margin-bottom: 22px;
+  border-radius: 30px;
+  background: #ffc5d4;
+  color: #a34d69;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .6px;
+  animation: sam-aparecer .8s ease both;
+}
+
+.sam-presentacion h1 {
+  margin: 0 0 22px;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(48px, 5.2vw, 76px);
+  font-weight: 700;
+  line-height: .99;
+  letter-spacing: -1.5px;
+  color: var(--marron);
+}
+
+.sam-presentacion h1 span {
+  color: #ed779a;
+}
+
+.sam-intro {
+  max-width: 570px;
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.sam-beneficios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.sam-beneficio {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 13px 10px;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(122,67,38,.07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.sam-beneficio:hover {
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: 0 13px 25px rgba(122,67,38,.12);
+}
+
+.sam-beneficio--verde { background: #e3f3cf; }
+.sam-beneficio--rosa { background: #ffd4e0; }
+.sam-beneficio--crema { background: #fff0cc; }
+
+.sam-beneficio__icono {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(255,255,255,.65);
+  font-size: 20px;
+}
+
+.sam-beneficio strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.sam-beneficio p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.sam-mascota {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.sam-mascota img {
+  display: block;
+  width: min(47%, 270px);
+  height: 245px;
+  object-fit: contain;
+  animation: sam-saltar 3.5s ease-in-out infinite;
+}
+
+.sam-globo {
+  position: relative;
+  padding: 20px;
+  border: 2px solid #f2a9bd;
+  border-radius: 45% 48% 45% 38%;
+  background: rgba(255,252,246,.88);
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.sam-globo span {
+  display: block;
+  margin-top: 4px;
+  color: #ed779a;
+  font-size: 27px;
+}
+
+/* TARJETA DEL FORMULARIO */
+
+.sam-formulario {
+  position: relative;
+  padding: clamp(25px, 3.2vw, 48px);
+  border: 3px solid rgba(255,255,255,.9);
+  border-radius: 34px;
+  background: rgba(255,250,240,.97);
+  box-shadow:
+    0 18px 45px rgba(122,67,38,.13),
+    inset 0 0 0 1px #f9d7dc;
+  animation: sam-aparecer .85s ease both;
+}
+
+.sam-formulario__cabecera {
+  position: relative;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.sam-formulario__cabecera h2 {
+  margin: 0 0 4px;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(38px, 4vw, 57px);
+  line-height: 1.1;
+  color: var(--marron);
+}
+
+.sam-formulario__cabecera p {
+  margin: 0;
+  color: #9b684c;
+  font-size: 17px;
+}
+
+.sam-formulario__adorno {
+  position: absolute;
+  top: -12px;
+  left: 7%;
+  color: #75a75b;
+  font-size: 35px;
+  animation: sam-girar 5s linear infinite;
+}
+
+.sam-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sam-formulario label {
+  margin-top: 5px;
+  color: var(--marron);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.sam-formulario input,
+.sam-formulario select,
+.sam-formulario textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--rosa);
+  border-radius: 14px;
+  outline: none;
+  background: white;
+  color: var(--marron);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+
+.sam-formulario textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.sam-formulario input:focus,
+.sam-formulario select:focus,
+.sam-formulario textarea:focus {
+  border-color: #e8789b;
+  box-shadow: 0 0 0 4px rgba(250,173,192,.22);
+}
+
+.sam-enviar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 60px;
+  padding: 12px 60px 12px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 35px;
+  background: var(--marron);
+  color: white;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 9px 20px rgba(122,67,38,.15);
+  transition: background .25s, transform .25s;
+}
+
+.sam-enviar:hover {
+  transform: translateY(-3px);
+  background: #945238;
+}
+
+.sam-enviar > span:first-child {
+  color: #ffc2d2;
+  font-size: 23px;
+}
+
+.sam-enviar__flecha {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rosa);
+  color: var(--marron);
+  font-size: 24px;
+  transition: transform .25s;
+}
+
+.sam-enviar:hover .sam-enviar__flecha {
+  transform: translateX(3px);
+}
+
+.sam-seguridad {
+  margin: 3px 0 0;
+  color: #a99486;
+  font-size: 11px;
+  text-align: center;
+}
+
+.sam-estado {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ADORNOS DEL FONDO */
+
+.sam-hoja,
+.sam-corazon,
+.sam-rollo {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.sam-hoja {
+  font-size: 95px;
+  opacity: .8;
+  animation: sam-balanceo 6s ease-in-out infinite;
+}
+
+.sam-hoja-1 {
+  top: 3%;
+  left: -15px;
+  transform: rotate(-25deg);
+}
+
+.sam-hoja-2 {
+  right: -15px;
+  bottom: 4%;
+  transform: rotate(25deg);
+}
+
+.sam-corazon {
+  color: #ed779a;
+  font-size: 55px;
+  animation: sam-saltar 4s ease-in-out infinite;
+}
+
+.sam-corazon-1 {
+  top: 26%;
+  left: 45%;
+}
+
+.sam-corazon-2 {
+  right: 3%;
+  bottom: 23%;
+  animation-delay: 1.2s;
+}
+
+.sam-rollo {
+  font-size: 65px;
+  opacity: .55;
+  animation: sam-girar 18s linear infinite;
+}
+
+.sam-rollo-1 {
+  top: 18%;
+  left: 2%;
+}
+
+.sam-rollo-2 {
+  right: 1%;
+  bottom: 38%;
+}
+
+/* ANIMACIONES */
+
+@keyframes sam-aparecer {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sam-saltar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes sam-balanceo {
+  0%, 100% { rotate: -5deg; }
+  50% { rotate: 6deg; }
+}
+
+@keyframes sam-girar {
+  to { rotate: 360deg; }
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .sam-contacto__layout {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .sam-presentacion h1 {
+    font-size: clamp(48px, 8vw, 70px);
+  }
+
+  .sam-formulario {
+    padding: 32px;
+  }
+
+  .sam-corazon-1 {
+    left: auto;
+    right: 6%;
+    top: 10%;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 560px) {
+  .sam-contacto {
+    padding: 38px 16px 50px;
+  }
+
+  .sam-presentacion h1 {
+    font-size: 46px;
+  }
+
+  .sam-intro {
+    font-size: 15px;
+  }
+
+  .sam-beneficios {
+    grid-template-columns: 1fr;
+  }
+
+  .sam-beneficio {
+    padding: 12px 15px;
+  }
+
+  .sam-beneficio p {
+    font-size: 12px;
+  }
+
+  .sam-mascota img {
+    width: 45%;
+    height: 175px;
+  }
+
+  .sam-globo {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .sam-formulario {
+    padding: 22px 17px;
+    border-radius: 25px;
+  }
+
+  .sam-formulario__cabecera h2 {
+    font-size: 40px;
+  }
+
+  .sam-hoja {
+    font-size: 55px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sam-contacto *,
+  .sam-contacto *::before,
+  .sam-contacto *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

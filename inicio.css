@@ -1,0 +1,1804 @@
+
+/* ==================================================
+   inicio.css · PORTADA SAMKANELI
+   ================================================== */
+
+
+/* ==================================================
+   1. HERO PRINCIPAL
+   ================================================== */
+
+   .hero {
+    padding-block: clamp(2rem, 6vw, 4.5rem) clamp(3rem, 6vw, 5rem);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: var(--s4);
+    align-items: center;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5.2rem);
+    line-height: 1.02;
+  }
+  
+  .hero-fruits-l {
+    margin: var(--s3) 0 .5rem;
+  }
+  
+  
+  /* ==================================================
+     2. ELEMENTOS VISUALES DEL HERO
+     ================================================== */
+  
+  .hero-visual {
+    position: relative;
+    padding: 0 0 2.5rem 1.5rem;
+  }
+  
+  .hero-photo {
+    aspect-ratio: 1 / 1.02;
+    width: 100%;
+  }
+  
+  .hero-spiral {
+    width: min(78%, 360px);
+    right: -8%;
+    top: -12%;
+    opacity: .55;
+    z-index: 0;
+  }
+  
+  .hero-photo,
+  .hero-mascot,
+  .hero-badge {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-mascot {
+    position: absolute;
+    left: -1rem;
+    bottom: 0;
+    width: clamp(120px, 22vw, 200px);
+    filter: drop-shadow(0 8px 12px rgba(122, 67, 38, .25));
+    transform-origin: 50% 100%;
+    animation: hola 1.4s var(--ease) .5s 1 both;
+  }
+  
+  .hero-badge {
+    position: absolute;
+    right: .5rem;
+    bottom: 3rem;
+  }
+  
+  
+  /* ==================================================
+     3. ANIMACIÓN DE LA MASCOTA
+     ================================================== */
+  
+  @keyframes hola {
+    0% {
+      transform: translateY(30px) scale(.8);
+      opacity: 0;
+    }
+  
+    60% {
+      transform: rotate(-6deg) scale(1.04);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  
+  
+  /* ==================================================
+     4. ENCABEZADOS DE SECCIÓN
+     ================================================== */
+  
+  .sec-head {
+    max-width: 760px;
+    margin-bottom: var(--s4);
+  }
+  
+  .sec-head.center {
+    margin-inline: auto;
+  }
+  
+  
+  /* ==================================================
+     5. TARJETAS DE SABORES
+     ================================================== */
+  
+  .flavors {
+    align-items: stretch;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .flavor {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flavor-media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--rosa-suave);
+  }
+  
+  .flavor-media .ph {
+    height: 100%;
+    border-radius: 0;
+    border-width: 0 0 3px;
+  }
+  
+  .flavor-media img {
+    transition: transform .6s var(--ease);
+  }
+  
+  .flavor:hover .flavor-media img {
+    transform: scale(1.05);
+  }
+  
+  .flavor-body {
+    padding: var(--s3);
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    flex: 1;
+  }
+  
+  .flavor-fruit {
+    font-weight: 800;
+    color: var(--verde-texto);
+    margin: 0;
+    font-size: var(--t-sm);
+  }
+  
+  .flavor-body h3 {
+    margin: 0;
+  }
+  
+  .flavor-tags {
+    display: flex;
+    gap: .4rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+    padding-top: .5rem;
+  }
+  
+  .flavor-body .btn {
+    margin-top: .5rem;
+    align-self: flex-start;
+  }
+  
+  .flavor-note {
+    margin-top: var(--s3);
+  }
+  
+  
+  /* ==================================================
+     6. COLLAGE DE LA SELVA CENTRAL
+     ================================================== */
+  
+  .selva-collage {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--s2);
+    align-items: center;
+  }
+  
+  .selva-collage .frame:first-child {
+    grid-column: 1 / 5;
+  }
+  
+  .selva-collage .sc-2 {
+    grid-column: 4 / 7;
+    margin-top: -2rem;
+  }
+  
+  .selva-collage .sc-3 {
+    grid-column: 1 / 4;
+    margin-top: -1rem;
+  }
+  
+  
+  /* ==================================================
+     7. SECCIÓN DE VIDEO
+     ================================================== */
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: var(--s4);
+    align-items: center;
+  }
+  
+  .video-slot {
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    background: var(--crema-claro);
+  }
+  
+  .video-stage {
+    position: relative;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .video-stage img,
+  .video-el {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+  
+  .video-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: var(--rosa);
+    color: var(--marron-osc);
+    border: 0;
+    border-radius: var(--r-pill);
+    padding: .9rem 1.8rem;
+    font: 700 1.1rem var(--f-body);
+    cursor: pointer;
+    box-shadow: var(--sombra);
+  }
+  
+  .video-note {
+    padding: .8rem 1rem;
+    margin: 0;
+    background: var(--rosa-suave);
+  }
+  
+  
+  /* ==================================================
+     8. FRANJA DE APLICACIONES
+     ================================================== */
+  
+  .ap-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s2);
+  }
+  
+  .ap-tile {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    border-radius: var(--r-md);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    box-shadow: var(--sombra-sm);
+  }
+  
+  .ap-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+  }
+  
+  .ap-tile:hover img {
+    transform: scale(1.06);
+  }
+  
+  .ap-tile span {
+    position: absolute;
+    left: .7rem;
+    bottom: .7rem;
+    background: var(--crema);
+    padding: .25rem .8rem;
+    border-radius: var(--r-pill);
+    font-weight: 800;
+    font-size: .95rem;
+  }
+  
+  
+  /* ==================================================
+     9. SECCIÓN DE LLAMADA A LA ACCIÓN
+     ================================================== */
+  
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: var(--s4);
+    align-items: center;
+  }
+  
+  .cta-seal {
+    width: min(280px, 70%);
+    margin-inline: auto;
+    border-radius: 50%;
+    transform: rotate(6deg);
+  }
+  
+  
+  /* ==================================================
+     10. DISEÑO RESPONSIVE · TABLET
+     ================================================== */
+  
+  @media (max-width: 980px) {
+    .flavors {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 860px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-visual {
+      padding: 0 0 2.2rem 0;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+  
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .ap-strip {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  /* ==================================================
+     11. DISEÑO RESPONSIVE · MÓVIL
+     ================================================== */
+  
+  @media (max-width: 700px) {
+    .cta-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .flavors {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/* ===== HERO DINÁMICO SAMKANELI ===== */
+
+.sam-hero-nuevo {
+    --sam-rosa: #FAADC0;
+    --sam-marron: #7A4326;
+    --sam-crema: #FFEED6;
+    --sam-verde: #C0E3A1;
+  
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+      radial-gradient(
+        circle at 8% 15%,
+        #ffffffb0,
+        transparent 30%
+      ),
+      linear-gradient(
+        125deg,
+        #FFEED6 0%,
+        #fbd5df 58%,
+        #f9c2d0 100%
+      );
+    padding: 65px 0 55px;
+  }
+  
+  .sam-hero-nuevo .sam-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(35px, 5vw, 75px);
+  }
+  
+  /* FOTOGRAFÍAS */
+  
+  .sam-hero-fotos {
+    position: relative;
+    min-height: 470px;
+  }
+  
+  .sam-foto {
+    position: absolute;
+    overflow: hidden;
+    border: 6px solid #fffaf1;
+    border-radius: 24px;
+    background: var(--sam-rosa);
+    box-shadow: 0 18px 40px #7A432626;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+  
+  .sam-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  
+  .sam-foto:hover {
+    box-shadow: 0 24px 45px #7A432633;
+  }
+  
+  .sam-foto:hover img {
+    transform: scale(1.07);
+  }
+  
+  .sam-foto-principal {
+    top: 3%;
+    left: 4%;
+    width: 76%;
+    height: 62%;
+    transform: rotate(-4deg);
+    z-index: 2;
+    animation: samEntradaIzquierda 0.8s ease both;
+  }
+  
+  .sam-foto-secundaria {
+    right: 0;
+    bottom: 5%;
+    width: 58%;
+    height: 45%;
+    transform: rotate(5deg);
+    z-index: 3;
+    animation: samEntradaDerecha 1s ease both;
+  }
+  
+  .sam-foto-proceso {
+    left: 0;
+    bottom: 0;
+    width: 43%;
+    height: 35%;
+    transform: rotate(-3deg);
+    z-index: 1;
+    animation: samEntradaIzquierda 1.1s ease both;
+  }
+  
+  .sam-foto-etiqueta {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 9px 13px;
+    border-radius: 30px;
+    background: #fffaf1ed;
+    color: var(--sam-marron);
+    font-size: 0.74rem;
+    font-weight: 900;
+  }
+  
+  /* SELLO DECORATIVO */
+  
+  .sam-sello {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 2%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #fffaf1;
+    border-radius: 50%;
+    background: var(--sam-verde);
+    color: var(--sam-marron);
+    box-shadow: 0 10px 25px #7A432626;
+    text-align: center;
+    transform: rotate(9deg);
+    animation: samFlotar 4s ease-in-out infinite;
+  }
+  
+  .sam-sello span {
+    font-size: 0.52rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+  
+  .sam-sello strong {
+    font-family: "Fredoka", sans-serif;
+    font-size: 1rem;
+  }
+  
+  .sam-adorno {
+    position: absolute;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: var(--sam-marron);
+    font-size: 1.8rem;
+  }
+  
+  .sam-adorno-uno {
+    bottom: 8%;
+    left: 4%;
+    background: var(--sam-rosa);
+    animation: samFlotar 4.5s ease-in-out infinite;
+  }
+  
+  .sam-adorno-dos {
+    top: 42%;
+    right: 4%;
+    background: var(--sam-crema);
+  }
+  
+  /* TEXTO */
+  
+  .sam-hero-texto {
+    animation: samEntradaTexto 0.9s ease both;
+  }
+  
+  .sam-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--sam-marron);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+  }
+  
+  .sam-punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--sam-rosa);
+    box-shadow: 0 0 0 5px #FAADC033;
+  }
+  
+  .sam-hero-texto h2 {
+    margin: 22px 0 18px;
+    color: var(--sam-marron);
+    font-family: "Fredoka", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.7rem);
+    line-height: 1.06;
+    letter-spacing: -0.035em;
+  }
+  
+  .sam-hero-texto h2 span {
+    display: block;
+    color: #BD5875;
+  }
+  
+  .sam-descripcion {
+    max-width: 550px;
+    color: #74513b;
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+  
+  /* CARACTERÍSTICAS */
+  
+  .sam-caracteristicas {
+    display: grid;
+    gap: 11px;
+    margin: 25px 0;
+  }
+  
+  .sam-caracteristica {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 11px 13px;
+    border: 1px solid #7A43261A;
+    border-radius: 16px;
+    background: #fffaf0a6;
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease;
+  }
+  
+  .sam-caracteristica:hover {
+    transform: translateX(6px);
+    background: #fffdf8;
+  }
+  
+  .sam-icono {
+    display: grid;
+    place-items: center;
+    flex: 0 0 43px;
+    height: 43px;
+    border-radius: 14px;
+    background: #f8d0db;
+    color: var(--sam-marron);
+    font-size: 1.5rem;
+  }
+  
+  .sam-icono-verde {
+    background: #dceecb;
+  }
+  
+  .sam-icono-crema {
+    background: var(--sam-crema);
+  }
+  
+  .sam-caracteristica strong {
+    display: block;
+    color: var(--sam-marron);
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+  
+  .sam-caracteristica p {
+    margin: 3px 0 0;
+    color: #80634e;
+    font-size: 0.79rem;
+  }
+  
+  /* BOTÓN */
+  
+  .sam-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 11px 12px 11px 22px;
+    border-radius: 50px;
+    background: var(--sam-marron);
+    color: white !important;
+    font-weight: 900;
+    text-decoration: none !important;
+    box-shadow: 0 10px 22px #7A43262b;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  
+  .sam-boton span {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--sam-rosa);
+    color: var(--sam-marron);
+    font-size: 1.25rem;
+    transition: transform 0.25s;
+  }
+  
+  .sam-boton:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 28px #7A432638;
+  }
+  
+  .sam-boton:hover span {
+    transform: rotate(45deg);
+  }
+  
+  .sam-frase {
+    margin-top: 23px;
+    color: #89664c;
+    font-size: 0.77rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  
+  /* ANIMACIONES */
+  
+  @keyframes samEntradaIzquierda {
+    from {
+      opacity: 0;
+      translate: -20px 15px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  
+  @keyframes samEntradaDerecha {
+    from {
+      opacity: 0;
+      translate: 20px 20px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  
+  @keyframes samEntradaTexto {
+    from {
+      opacity: 0;
+      translate: 0 20px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  
+  @keyframes samFlotar {
+    0%, 100% {
+      translate: 0 0;
+    }
+    50% {
+      translate: 0 -9px;
+    }
+  }
+  
+  /* TABLET */
+  
+  @media (max-width: 900px) {
+    .sam-hero-nuevo .sam-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  
+    .sam-hero-fotos {
+      width: min(600px, 100%);
+      margin: 0 auto;
+    }
+  
+    .sam-hero-texto {
+      max-width: 700px;
+    }
+  }
+  
+  /* CELULAR */
+  
+  @media (max-width: 560px) {
+    .sam-hero-nuevo {
+      padding: 40px 0;
+    }
+  
+    .sam-hero-fotos {
+      min-height: 320px;
+    }
+  
+    .sam-foto {
+      border-width: 4px;
+      border-radius: 17px;
+    }
+  
+    .sam-sello {
+      width: 76px;
+      height: 76px;
+      border-width: 3px;
+    }
+  
+    .sam-sello strong {
+      font-size: 0.8rem;
+    }
+  
+    .sam-sello span {
+      font-size: 0.4rem;
+    }
+  
+    .sam-hero-texto h2 {
+      font-size: 2.4rem;
+    }
+  }
+  
+  /* Accesibilidad */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .sam-hero-nuevo *,
+    .sam-hero-nuevo *::before,
+    .sam-hero-nuevo *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+    
+
+/* ========================================
+   GALERÍA SAMKANELI — ESTILO DINÁMICO
+======================================== */
+
+.galeria-sam {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 8% 15%, rgba(250,173,192,.19), transparent 25%),
+      #fffaf3;
+  }
+  
+  .galeria-head {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto 36px;
+  }
+  
+  .galeria-head .eyebrow {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: #faadc0;
+    color: #7a4326;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  
+  .galeria-head h2 {
+    color: #7a4326;
+    line-height: 1.15;
+  }
+  
+  .galeria-head .lead {
+    color: #866a58;
+    line-height: 1.8;
+  }
+  
+  .galeria-deco {
+    position: absolute;
+    top: -10px;
+    right: 5%;
+    color: #c0e3a1;
+    font-size: clamp(2rem, 5vw, 4rem);
+    animation: galeriaGiro 12s linear infinite;
+  }
+  
+  .galeria-carousel {
+    --gal-marron: #7a4326;
+    --gal-rosa: #faadc0;
+  
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(12px, 2.5vw, 26px);
+    overflow: hidden;
+    border: 1px solid rgba(122,67,38,.1);
+    border-radius: 30px;
+    background: linear-gradient(145deg, #fff, #fff0e8);
+    box-shadow: 0 20px 55px rgba(122,67,38,.12);
+  }
+  
+  .galeria-track {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    outline: none;
+  }
+  
+  .galeria-track::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .galeria-track.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+    user-select: none;
+  }
+  
+  .galeria-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    margin: 0;
+    scroll-snap-align: start;
+    animation: galeriaEntrada .45s ease both;
+  }
+  
+  .galeria-media {
+    position: relative;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden;
+    border-radius: 23px;
+    background: #f8dfd6;
+    box-shadow: 0 12px 30px rgba(70,35,20,.13);
+  }
+  
+  .galeria-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+  
+  .galeria-slide:hover .galeria-media img {
+    transform: scale(1.035);
+  }
+  
+  .galeria-numero {
+    position: absolute;
+    right: 17px;
+    bottom: 17px;
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 50%;
+    background: rgba(255,250,243,.91);
+    color: #7a4326;
+    font-size: .95rem;
+    font-weight: 900;
+    box-shadow: 0 5px 18px rgba(0,0,0,.1);
+  }
+  
+  .galeria-slide figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 20px 7px 10px;
+    color: #7a4326;
+  }
+  
+  .galeria-slide figcaption .badge {
+    padding: 6px 12px;
+    border: 1px solid #f4c4d0;
+    border-radius: 30px;
+    background: #fff0f4;
+    color: #8a3e56;
+    font-size: .76rem;
+    font-weight: 800;
+  }
+  
+  .galeria-slide figcaption strong {
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+    line-height: 1.25;
+    font-weight: 850;
+  }
+  
+  .galeria-slide figcaption > span:last-child {
+    color: #866a58;
+    font-size: .95rem;
+    line-height: 1.7;
+  }
+  
+  .galeria-ui {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(122,67,38,.13);
+  }
+  
+  .galeria-ui .car-count {
+    min-width: 48px;
+    color: #7a4326;
+    font-size: .86rem;
+    font-weight: 850;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .galeria-ui .car-dots {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .galeria-ui .car-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0 13px;
+    border: 1px solid rgba(122,67,38,.2);
+    border-radius: 30px;
+    background: #fff;
+    color: #7a4326;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .25s ease;
+  }
+  
+  .galeria-ui .car-btn:hover {
+    transform: translateY(-2px);
+    border-color: #7a4326;
+    background: #7a4326;
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(122,67,38,.16);
+  }
+  
+  .galeria-ui .car-btn:focus-visible {
+    outline: 3px solid #faadc0;
+    outline-offset: 3px;
+  }
+  
+  .galeria-ui .car-dots .car-dot {
+    width: 9px;
+    height: 9px;
+    min-width: 9px;
+    min-height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #d9b9a7;
+    cursor: pointer;
+    transition: width .25s ease, background .25s ease;
+  }
+  
+  .galeria-ui .car-dots .car-dot[aria-current="true"] {
+    width: 25px;
+    border-radius: 20px;
+    background: #7a4326;
+  }
+  
+  .galeria-nota {
+    margin: 24px auto 0;
+    color: #8a6c58;
+    font-size: .9rem;
+    text-align: center;
+  }
+  
+  .galeria-nota span {
+    margin-right: 5px;
+    color: #e98ca8;
+  }
+  
+  @keyframes galeriaEntrada {
+    from {
+      opacity: .6;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes galeriaGiro {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .galeria-carousel {
+      padding: 12px;
+      border-radius: 22px;
+    }
+  
+    .galeria-track {
+      gap: 12px;
+    }
+  
+    .galeria-media {
+      aspect-ratio: 4 / 3 !important;
+      border-radius: 16px;
+    }
+  
+    .galeria-numero {
+      right: 10px;
+      bottom: 10px;
+      width: 40px;
+      height: 40px;
+      font-size: .8rem;
+    }
+  
+    .galeria-slide figcaption {
+      padding: 15px 3px 8px;
+    }
+  
+    .galeria-slide figcaption > span:last-child {
+      font-size: .85rem;
+    }
+  
+    .galeria-ui {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .galeria-ui .car-btn {
+      min-width: 36px;
+      min-height: 36px;
+      padding: 0 9px;
+    }
+  
+    .galeria-ui .car-dots {
+      gap: 5px;
+    }
+  
+    .galeria-nota {
+      font-size: .8rem;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .galeria-deco {
+      animation: none;
+    }
+  
+    .galeria-slide {
+      animation: none;
+    }
+  
+    .galeria-track {
+      scroll-behavior: auto;
+    }
+  
+    .galeria-media img,
+    .galeria-ui .car-btn,
+    .galeria-ui .car-dot {
+      transition: none;
+    }
+  }
+
+
+/* =========================================
+   SAMKANELI · SABORES EDITORIAL TROPICAL
+========================================= */
+
+.sabores-nuevo {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: clamp(55px, 8vw, 100px);
+    background: #fff8ed;
+  }
+  
+  .sabores-nuevo::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    right: -130px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: #faadc033;
+  }
+  
+  .sabores-nuevo::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 180px;
+    left: -150px;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: #c0e3a144;
+  }
+  
+  .sabores-intro {
+    max-width: 850px;
+    margin: 0 0 55px;
+  }
+  
+  .sabores-intro .eyebrow {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #faadc0;
+    color: #7a4326;
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  
+  .sabores-intro h2 {
+    max-width: 750px;
+    margin: 16px 0;
+    color: #7a4326;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: .98;
+    letter-spacing: -.045em;
+  }
+  
+  .sabores-intro .lead {
+    max-width: 620px;
+    color: #856650;
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+  
+  .sabores-sello {
+    position: absolute;
+    right: 6%;
+    bottom: 15px;
+    display: grid;
+    width: 95px;
+    height: 95px;
+    place-content: center;
+    border: 2px dashed #7a4326;
+    border-radius: 50%;
+    background: #c0e3a1;
+    color: #7a4326;
+    font-size: .9rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    transform: rotate(10deg);
+  }
+  
+  /* Fotografía editorial principal */
+  
+  .sabores-destacado {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: clamp(25px, 5vw, 75px);
+    margin: 65px 0 100px;
+    padding: clamp(20px, 4vw, 48px);
+    border-radius: 8px 100px 8px 100px;
+    background: #c8eeae;
+    box-shadow: 0 25px 60px #7a43261a;
+  }
+  
+  .sabores-destacado-img {
+    position: relative;
+    min-width: 0;
+    overflow: visible;
+    border: 9px solid #fff8ed;
+    border-radius: 8px 70px 8px 70px;
+    box-shadow: 15px 18px 0 #7a432617;
+    transform: rotate(-2deg);
+  }
+  
+  .sabores-destacado-img img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: 3px 58px 3px 58px;
+    transition: transform .5s ease;
+  }
+  
+  .sabores-destacado:hover .sabores-destacado-img img {
+    transform: scale(1.035);
+  }
+  
+  .sabores-etiqueta {
+    position: absolute;
+    right: -20px;
+    bottom: 25px;
+    padding: 12px 18px;
+    border-radius: 3px 20px 3px 20px;
+    background: #c0e3a1;
+    color: #7a4326;
+    font-size: .78rem;
+    font-weight: 900;
+    box-shadow: 0 7px 20px #7a432626;
+  }
+  
+  .sabores-destacado-texto {
+    padding: 10px;
+  }
+  
+  .sabores-mini {
+    color: #7a4326;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .17em;
+  }
+  
+  .sabores-destacado-texto h3 {
+    margin: 18px 0;
+    color: #7a4326;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    line-height: 1.02;
+    letter-spacing: -.035em;
+  }
+  
+  .sabores-destacado-texto p {
+    margin-bottom: 25px;
+    color: #70462f;
+    line-height: 1.85;
+  }
+  
+  /* Encabezado de la colección */
+  
+  .sabores-lista-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+    scroll-margin-top: 110px;
+  }
+  
+  .sabores-lista-head .eyebrow {
+    color: #a65d73;
+    font-weight: 900;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  
+  .sabores-lista-head h3 {
+    margin: 10px 0 0;
+    color: #7a4326;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+  
+  .sabores-contador {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    border: 1px solid #d9b9a7;
+    border-radius: 3px 20px 3px 20px;
+    color: #7a4326;
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: .1em;
+  }
+  
+  /* Composición asimétrica */
+  
+  .sabores-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 28px 22px;
+  }
+  
+  .sabor-card {
+    position: relative;
+    grid-column: span 2;
+    min-width: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 4px 35px 4px 35px;
+    background: #fffdf8;
+    box-shadow: 0 10px 30px #7a432610;
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+  
+  .sabor-card:nth-child(4),
+  .sabor-card:nth-child(5) {
+    grid-column: span 3;
+  }
+  
+  .sabor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px #7a432620;
+  }
+  
+  .sabor-foto {
+    position: relative;
+    overflow: hidden;
+    background: #ffe5e9;
+  }
+  
+  .sabor-foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+  
+  .sabor-card:hover .sabor-foto img {
+    transform: scale(1.07);
+  }
+  
+  .sabor-numero {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: grid;
+    width: 45px;
+    height: 45px;
+    place-items: center;
+    border: 2px solid #fff8ed;
+    border-radius: 50%;
+    background: #c0e3a1;
+    color: #7a4326;
+    font-size: .8rem;
+    font-weight: 900;
+  }
+  
+  .sabor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: clamp(18px, 2.3vw, 28px);
+  }
+  
+  .sabor-fruta {
+    color: #a45d73;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+  }
+  
+  .sabor-info h3 {
+    margin: 0;
+    color: #7a4326;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.15;
+  }
+  
+  .sabor-info p {
+    margin: 0;
+    color: #856650;
+    font-size: .92rem;
+    line-height: 1.8;
+  }
+  
+  .sabor-estado {
+    display: inline-block;
+    padding: 7px 11px;
+    border: 1px solid #c0e3a1;
+    border-radius: 3px 15px 3px 15px;
+    background: #f1f8e9;
+    color: #496633;
+    font-size: .72rem;
+    font-weight: 800;
+  }
+  
+  .sabor-estado.sabor-idea {
+    border-color: #e9bfd0;
+    background: #fff0f4;
+    color: #96516a;
+  }
+  
+  .sabor-info .btn {
+    margin-top: 5px;
+    align-self: flex-start;
+  }
+  
+  /* Nota informativa */
+  
+  .sabores-aclaracion {
+    max-width: 760px;
+    margin: 35px auto 0;
+    padding: 18px 22px;
+    border-left: 4px solid #faadc0;
+    background: #fff0f4;
+    color: #7a4326;
+    font-size: .88rem;
+    line-height: 1.8;
+  }
+  
+  /* Tablet */
+  
+  @media (max-width: 900px) {
+    .sabores-destacado {
+      gap: 25px;
+      border-radius: 8px 60px 8px 60px;
+    }
+  
+    .sabores-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .sabor-card,
+    .sabor-card:nth-child(4),
+    .sabor-card:nth-child(5) {
+      grid-column: span 1;
+    }
+  }
+  
+  /* Móvil */
+  
+  @media (max-width: 620px) {
+    .sabores-intro {
+      margin-bottom: 30px;
+    }
+  
+    .sabores-intro h2 {
+      font-size: clamp(2.3rem, 11vw, 3.3rem);
+    }
+  
+    .sabores-sello {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: 75px;
+      height: 75px;
+      margin: 20px 0 0 auto;
+    }
+  
+    .sabores-destacado {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      margin: 35px 0 60px;
+      padding: 17px;
+      border-radius: 8px 45px 8px 45px;
+    }
+  
+    .sabores-destacado-texto {
+      padding: 8px;
+    }
+  
+    .sabores-destacado-texto h3 {
+      font-size: 2.3rem;
+    }
+  
+    .sabores-lista-head {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .sabores-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+  
+    .sabor-card,
+    .sabor-card:nth-child(4),
+    .sabor-card:nth-child(5) {
+      grid-column: span 1;
+    }
+  
+    .sabor-foto img {
+      aspect-ratio: 5 / 3;
+    }
+  
+    .sabor-info {
+      padding: 22px;
+    }
+  
+    .sabor-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    .sabores-aclaracion {
+      padding: 15px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .sabor-card,
+    .sabor-foto img,
+    .sabores-destacado-img img {
+      transition: none;
+    }
+  }
+
+
+
+/* =========================================================
+   NUEVO INICIO SAMKANELI + FRANJA VERDE ANIMADA
+   Añadido al CSS actual: conserva los estilos anteriores.
+   Requiere el bloque HTML .portada-sam y .franja-sabores en index.html.
+   ========================================================= */
+.portada-sam{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:560px;
+  padding:38px 0 45px;
+  background:#fff0d9;
+  color:#713b20;
+}
+.portada-fondo{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(255,240,217,.98) 0%,rgba(255,240,217,.92) 38%,rgba(255,240,217,.40) 68%,rgba(255,240,217,.08) 100%),
+    url("../SAMKANELI/img/mockups/fondo-samkaneli.png") 90% center/cover no-repeat;
+}
+.portada-contenido{
+  width:min(1280px,calc(100% - 48px));
+  min-height:450px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.02fr) minmax(340px,.98fr);
+  align-items:center;
+  gap:clamp(24px,4vw,70px);
+}
+.portada-texto h1{
+    max-width:580px;
+    margin:0 0 12px;
+    color:#713b20;
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:clamp(29px,3.1vw,43px);
+    font-weight:normal;
+    line-height:1.08;
+    letter-spacing:normal;
+  }
+.portada-marca{width:min(700px,100%);margin:0 0 12px}
+.portada-marca img{display:block;width:100%;height:auto;object-fit:contain}
+.portada-eslogan{
+  margin:0 0 13px;
+  color:#9b5c3c;
+  font:italic clamp(23px,2.3vw,31px)/1.2 Georgia,serif;
+}
+.portada-texto h1{
+  max-width:580px;
+  margin:0 0 12px;
+  color:#713b20;
+  font:700 clamp(29px,3.1vw,43px)/1.08 "Fredoka","Nunito",sans-serif;
+  letter-spacing:-.7px;
+}
+.portada-descripcion {
+    max-width: 570px;
+    margin: 0;
+    color: #805037;
+    font: italic 15px/1.75 Georgia, serif !important;
+  }
+.portada-botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:23px}
+.portada-boton{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:12px 20px;
+  border:1px solid transparent;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.portada-boton:hover{transform:translateY(-3px);box-shadow:0 9px 20px #713b2020}
+.portada-boton-rosa{background:#f39bc6;color:#fff}
+.portada-boton-claro{background:#fffdf7;color:#713b20;border-color:#9acb7c}
+.portada-paleta{display:flex;flex-wrap:wrap;gap:15px;margin-top:24px}
+.portada-paleta span{display:flex;align-items:center;gap:6px;font-size:10px;font-weight:700;color:#805037}
+.portada-paleta i{
+  display:block;width:14px;height:14px;border:1px solid #fff;border-radius:50%;
+  box-shadow:0 0 0 1px #713b2018;
+}
+.paleta-rosa{background:#f39bc6}
+.paleta-marron{background:#713b20}
+.paleta-crema{background:#fff3dd}
+.paleta-verde{background:#b9e39b}
+.portada-foto{
+  position:relative;
+  min-width:0;
+  align-self:stretch;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 0 12px;
+}
+.portada-foto img{
+  display:block;
+  width:100%;
+  height:clamp(300px,34vw,440px);
+  object-fit:cover;
+  object-position:center;
+  border-radius:34px 110px 34px 110px;
+  box-shadow:0 24px 55px rgba(113,59,32,.19);
+}
+.portada-sello{
+  position:absolute;
+  right:-8px;
+  bottom:28px;
+  padding:12px 17px;
+  border:2px solid #fff;
+  border-radius:15px;
+  background:#b9e39b;
+  color:#713b20;
+  font-size:11px;
+  line-height:1.45;
+  text-align:center;
+  transform:rotate(3deg);
+  box-shadow:0 8px 18px rgba(113,59,32,.12);
+}
+.portada-sello strong{font-size:13px}
+.franja-sabores{
+  position:relative;
+  z-index:2;
+  height:42px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  background:#b9e39b;
+  border-top:3px solid #fff;
+  color:#713b20;
+}
+.franja-sabores-pista{
+  display:flex;
+  align-items:center;
+  gap:38px;
+  width:max-content;
+  min-width:max-content;
+  animation:franjaSamkaneli 34s linear infinite;
+}
+.franja-sabores-pista span{
+  flex:0 0 auto;
+  white-space:nowrap;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.franja-sabores:hover .franja-sabores-pista{animation-play-state:paused}
+@keyframes franjaSamkaneli{to{transform:translateX(-50%)}}
+
+@media(max-width:900px){
+  .portada-sam{padding:30px 0 36px}
+  .portada-contenido{grid-template-columns:1fr;gap:20px}
+  .portada-texto{max-width:760px;margin:auto;text-align:center}
+  .portada-marca{margin:0 auto 10px}
+  .portada-etiqueta{margin-bottom:15px}
+  .portada-texto h1,.portada-descripcion{margin-left:auto;margin-right:auto}
+  .portada-botones,.portada-paleta{justify-content:center}
+  .portada-foto{padding:4px 0 12px}
+  .portada-foto img{height:clamp(250px,55vw,420px);border-radius:28px 70px 28px 70px}
+  .portada-sello{right:10px;bottom:20px}
+}
+@media(max-width:520px){
+  .portada-contenido{width:calc(100% - 28px)}
+  .portada-etiqueta{font-size:8px;letter-spacing:1px}
+  .portada-texto h1{font-size:30px}
+  .portada-eslogan{font-size:23px}
+  .portada-descripcion{font-size:13px;line-height:1.65}
+  .portada-botones{gap:8px}
+  .portada-boton{width:100%;min-height:43px}
+  .portada-paleta{gap:10px}
+  .portada-paleta span{font-size:9px}
+  .franja-sabores{height:38px}
+  .franja-sabores-pista{gap:25px;animation-duration:27s}
+  .franja-sabores-pista span{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .franja-sabores-pista{animation:none}
+  .portada-boton{transition:none}
+}
+/* Corregir tipografía del título principal */
+html body .portada-sam .portada-contenido .portada-texto h1#portada-titulo {
+    font-family: Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: normal !important;
+    letter-spacing: normal !important;
+  }
+  .portada-sam .portada-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px !important;
+    margin-bottom: 14px;
+    background: #FCE1E9 !important;
+    color: #7A4326 !important;
+    border: 1px solid #F4B7CA !important;
+    border-radius: 50px !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.4;
+    box-shadow: 0 3px 10px rgba(122, 67, 38, 0.06);
+  }
+  /* DIFUMINADO ROSADO DETRÁS DEL CONTENIDO IZQUIERDO */
+.portada-sam .portada-texto {
+    position: relative;
+    isolation: isolate;
+  }
+  
+  .portada-sam .portada-texto::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -35px;
+    right: -35px;
+    bottom: -35px;
+    left: -45px;
+    pointer-events: none;
+    border-radius: 45px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(250, 173, 192, 0.48) 0%,
+      rgba(250, 173, 192, 0.28) 45%,
+      rgba(250, 173, 192, 0.10) 68%,
+      transparent 100%
+    );
+    filter: blur(18px);
+  }
+  #valores-corporativos:has(.sk-valor-opcion:nth-child(5):is(.activa, [aria-pressed="true"])) .sk-detalle-imagen img {
+    object-fit: contain;
+    object-position: left center;
+  }
